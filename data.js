@@ -21,17 +21,18 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var noises = []
-noises = ["roar"];
-nosises.push["memek"];
-noises.unshift["meow"];
-noises.push("sweak");
-noises[noises.length] = 'sizzzzz'
+var noises = [];
+noises = ['roar'];
+noises.push('meek meek');
+noises.unshift('meow');
+noises.push('sweak');
+noises[noises.length] = 'sizz';
+
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+animal['noises'] = (noises)
 
 /* *******************************************************************
  * Step 4 - Review
@@ -55,14 +56,30 @@ noises[noises.length] = 'sizzzzz'
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+var animals = [];
+animals.push(animal);
+var tRex = { species: 'dinosuar', name: 'LeJohn', noises: ['roar', 'honk', 'jahahha', 'mep'] };
+animals.push(tRex);
+//console.log(animals);
+var ladyBug = { species: 'insect', name: 'LeShka', noises: ['roar', 'bzzzz', 'hiss', 'zahahah'] };
+animals.push(ladyBug);
+var roadRunner = { species: 'bird', name: 'Billy', noises: ['beepBeep', 'chirp', 'tweet'] };
+animals.push(roadRunner)
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var friends = [];
+ 
+function getRandom(){
+return Math.floor(Math.random() * animals.length)
+}  
+ 
+var random = getRandom(animals);
+friends.push(animals[random].name)  
+console.log(friends);
+ 
+animals[random]['friends'] = friends
+console.log(animals[random])
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
